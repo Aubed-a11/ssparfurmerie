@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail produit - SS Parfumerie</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Lato', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- NAVBAR -->
+<nav class="bg-purple-700 text-white p-4 flex justify-between items-center">
+  <div class="text-2xl font-bold">SS Parfumerie</div>
+  <a href="index.html" class="hover:text-purple-300">← Retour</a>
+</nav>
+
+<!-- FICHE PRODUIT -->
+<section class="max-w-6xl mx-auto my-12 px-4 md:flex md:gap-12">
+
+  <!-- Image -->
+  <div class="md:w-1/2">
+    <img id="product-image"
+         src=""
+         alt=""
+         class="rounded shadow-lg w-full">
+  </div>
+
+  <!-- Infos -->
+  <div class="md:w-1/2 mt-8 md:mt-0">
+
+    <h1 id="product-name"
+        class="text-4xl font-bold text-purple-700 mb-4"></h1>
+
+    <p id="product-desc" class="text-gray-700 mb-4"></p>
+
+    <p id="product-price"
+       class="text-2xl font-bold text-purple-700 mb-6"></p>
+
+    <button id="addToCartBtn"
+      class="bg-purple-700 text-white px-6 py-3 rounded hover:bg-purple-800">
+      Ajouter au panier
+    </button>
+
+    <p id="message"
+       class="mt-4 text-green-600 font-semibold hidden">
+       ✔ Produit ajouté au panier
+    </p>
+
+  </div>
+</section>
+
+<!-- JS -->
+<script>
+/* ================= PRODUITS ================= */
+const products = {
+  p1: {
+    name: "HAPPY FRAGRANCE",
+    desc: "Private Collection 85 – Pour Femme",
+    price: 20000,
+    image: "HP.jpeg"
+  },
+  p2: {
+    name: "HAPPY FRAGRANCE",
+    desc: "Private Collection 85 – Pour Femme",
+    price: 20000,
+    image: "HFF2.jpeg"
+  },
+  p3: {
+    name: "HAPPY FRAGRANCE",
+    desc: "Private Collection 85 - Pour Femme -F88 AMBRE-FLORAL",
+    price: 20000,
+    image: "HFF88.jpeg"
+  },
+  p4: {
+    name: "HAPPY FRAGRANCE",
+    desc: "Private Collection 85 – Pour Homme",
+    price: 20000,
+    image: "HFH.jpeg"
+  },
+   p5: {
+    name: "HAPPY FRAGRANCE",
+    desc: "Private Collection 85 – Pour Homme-33 H AROMATIQUE-FOURGERIE",
+    price: 20000,
+    image: "33H.jpeg"
+  },
+  p6: {
+    name: "GOUTTES D'AMOUR-PARFUM",
+    desc: "DEEP IN MY HEART – Eau de Parfum",
+    price: 20000,
+    image: "GA.jpeg"
+  },
+  p7: {
+    name: "L'HOMME QUE J'AIME",
+    desc: "EXTREME – Parfum Homme",
+    price: 20000,
+    image: "HQJ.jpeg"
+  },
+  p8: {
+    name: "L'HOMME QUE J'AIME",
+    desc: "SPORT – Parfum Homme",
+    price: 20000,
+    image: "HQJS.jpeg"
+  }
+};
+
+/* ================= RECUP ID ================= */
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+const product = products[productId];
+
+/* ================= AFFICHAGE ================= */
+if (product) {
+  document.getElementById("product-name").textContent = product.name;
+  document.getElementById("product-desc").textContent = product.desc;
+  document.getElementById("product-price").textContent =
+    product.price.toLocaleString() + " FCFA";
+  document.getElementById("product-image").src = product.image;
+} else {
+  document.body.innerHTML =
+    "<p class='text-center mt-20 text-red-600'>Produit introuvable</p>";
+}
+
+/* ================= PANIER ================= */
+document.getElementById("addToCartBtn").addEventListener("click", () => {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  document.getElementById("message").classList.remove("hidden");
+});
+</script>
+
+</body>
+</html>

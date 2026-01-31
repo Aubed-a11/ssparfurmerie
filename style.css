@@ -1,0 +1,20 @@
+/* Styles personnalisés supplémentaires */
+body {
+    scroll-behavior: smooth;
+}
+
+button.add-to-cart {
+    transition: transform 0.2s ease;
+}
+
+button.add-to-cart:hover {
+    transform: scale(1.05);
+}
+
+nav ul li a {
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #d6b3ff; /* violet clair au hover */
+}

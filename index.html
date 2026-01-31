@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parfums Luxe - Accueil</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body { font-family: 'Lato', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-purple-700/40 border-b border-purple-300/30">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <img
+        src="https://dummyimage.com/200x200/7e22ce/ffffff&text=SS"
+        alt="SS Parfumerie"
+        class="w-10 h-10 rounded-full shadow-lg"
+      >
+      <span class="text-xl font-bold tracking-wide">
+        SS Parfumerie
+      </span>
+    </div>
+
+    <!-- MENU -->
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="index.html" class="hover:text-purple-200 transition">Accueil</a></li>
+      <li><a href="catalogue.html" class="hover:text-purple-200 transition">Catalogue</a></li>
+      <li><a href="cart.html" class="hover:text-purple-200 transition">Panier</a></li>
+      
+      <li><a href="profil.html" class="hover:text-purple-200 transition">Profil</a></li>
+      <li>
+        <a href="admin.html" class="text-yellow-300 font-bold hover:text-yellow-400 transition">
+          Admin
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- ================= HERO VIOLET + GLASS ================= -->
+<section
+  class="relative min-h-screen flex items-center justify-center pt-32"
+  style="
+    background-image: url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+  "
+>
+
+  <!-- Overlay violet -->
+  <div class="absolute inset-0 bg-purple-900/70"></div>
+
+  <!-- GLASS CARD -->
+  <div
+    class="relative z-10 max-w-2xl mx-auto text-center p-10 rounded-3xl
+           bg-purple-300/20 backdrop-blur-2xl
+           border border-purple-200/30 shadow-2xl">
+
+    <!-- PARFUM -->
+    <img
+      
+      class="w-36 mx-auto mb-8
+             drop-shadow-[0_0_40px_rgba(168,85,247,0.6)]"
+    >
+
+    <h1 class="text-5xl font-bold mb-6">
+      L’élégance olfactive
+    </h1>
+
+    <p class="text-lg mb-10 text-purple-100">
+      Des parfums d’exception pour sublimer votre identité
+    </p>
+
+    <a
+      href="catalogue.html"
+      class="inline-block bg-purple-700 px-10 py-4 rounded-full
+             font-semibold hover:bg-purple-800 transition shadow-lg"
+    >
+      Découvrir le catalogue
+    </a>
+
+  </div>
+</section>
+<!-- ================= PRÉSENTATION ================= -->
+<section class="relative py-24 px-6">
+
+  <!-- Fond décoratif violet très doux -->
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-200/40 via-purple-300/30 to-purple-200/40 blur-3xl"></div>
+
+  <!-- Carte glass -->
+  <div
+    class="relative max-w-5xl mx-auto text-center p-12 rounded-3xl
+           bg-purple-200/30 backdrop-blur-2xl
+           border border-purple-300/40 shadow-xl">
+
+    <h2 class="text-4xl font-extrabold text-black mb-6">
+      Pourquoi <span class="text-purple-700">SS Parfumerie</span> ?
+    </h2>
+
+    <p class="text-black/80 max-w-3xl mx-auto text-lg leading-relaxed">
+      <strong>SS Parfumerie</strong> est spécialisée dans la
+      <strong>revente de parfums authentiques</strong>, soigneusement sélectionnés
+      parmi les plus grandes marques.
+      <br><br>
+      Nous vous proposons une large gamme de fragrances
+      <strong>florales</strong>, <strong>orientales</strong> et
+      <strong>boisées</strong>, adaptées à tous les styles et toutes les occasions.
+      <br><br>
+      Notre engagement est simple :
+      vous garantir des parfums <strong>originaux</strong>,
+      une <strong>qualité irréprochable</strong> et une
+      <strong>expérience d’achat fiable</strong>,
+      dans un univers élégant et raffiné.
+    </p>
+
+  </div>
+</section>
+
+
+
+<!-- ================= PRODUITS VEDETTES ================= -->
+<section class="bg-gray-100 py-16 px-6">
+  <h2 class="text-3xl text-center text-purple-700 mb-10">Produits phares</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- Produit 1 -->
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HP.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">HAPPY FRAGRANCE</h3>
+      <p class="text-gray-600">Private Collection 85 - Pour Femme</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p1"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HFF2.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">HAPPY FRAGRANCE</h3>
+      <p class="text-gray-600">Private Collection 85 - Pour Femme</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p2"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HFF88.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">HAPPY FRAGRANCE</h3>
+      <p class="text-gray-600">Private Collection 85 - Pour Femme - F88 AMBRE-FLORAL</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p3"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HFH.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">HAPPY FRAGRANCE</h3>
+      <p class="text-gray-600">Private Collection 85 - Pour Homme</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p4"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\33H.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">HAPPY FRAGRANCE</h3>
+      <p class="text-gray-600">Private Collection 85 - Pour Homme - 33H AROMATIQUE-FOURGERE</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p5"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+    <!-- Produit 2 -->
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\GA.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">GOUTTES D'AMOUR - PARFUM</h3>
+      <p class="text-gray-600">DEEP IN MY HEART - EAU DE PARFUM</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p6"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+   <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HQJ.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">L'HOMME QUE J'AIME</h3>
+      <p class="text-gray-600">EXTREME</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p7"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <img src="C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\parfums-frontend\HQJS.jpeg" class="w-full rounded mb-4">
+      <h3 class="font-bold text-xl">L'HOMME QUE J'AIME</h3>
+      <p class="text-gray-600">SPORT</p>
+      <p class="font-bold text-purple-700 mt-2">20 000 FCFA</p>
+      <a href="product.html?id=p8"
+         class="inline-block mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
+         Voir le produit
+      </a>
+    </div>
+
+    <!-- Produit 3 -->
+    
+
+  </div>
+</section>
+
+<section id="contact" class="bg-gradient-to-br from-purple-50 via-purple-100 to-purple-200 py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="text-4xl text-center font-bold text-purple-700 mb-12">
+      Contactez-nous
+    </h2>
+
+    <div class="bg-white rounded-2xl shadow-xl p-8">
+
+      <!-- INFOS -->
+      <div class="mb-8 text-gray-600 space-y-3 text-sm">
+        <p class="flex items-center gap-2">📍 <span>Dakar, Sénégal</span></p>
+        <p class="flex items-center gap-2">📞 <span>+221 784 630 707</span></p>
+        <p class="flex items-center gap-2">✉️ <span>contact@ssparfumerie.com</span></p>
+      </div>
+
+      <!-- BOUTONS SOCIAUX -->
+      <div class="flex flex-wrap gap-4 mb-8">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/221784630707"
+           target="_blank"
+           class="flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-full
+                  hover:bg-green-600 transition shadow-md hover:scale-105">
+          💬 WhatsApp
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/14MkCwLpjTU/?mibextid=wwXIfr"
+           target="_blank"
+           class="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-full
+                  hover:bg-blue-700 transition shadow-md hover:scale-105">
+          <i class="fab fa-facebook-f"></i>
+          Facebook
+        </a>
+
+      </div>
+
+      <!-- FORMULAIRE -->
+      <form id="contactForm" class="space-y-4">
+
+        <input id="name" type="text" required
+          placeholder="Votre nom"
+          class="w-full border border-purple-200 rounded-lg px-4 py-3
+                 focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
+
+        <input id="email" type="email" required
+          placeholder="Votre email"
+          class="w-full border border-purple-200 rounded-lg px-4 py-3
+                 focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
+
+        <textarea id="message" rows="5" required
+          placeholder="Votre message"
+          class="w-full border border-purple-200 rounded-lg px-4 py-3
+                 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"></textarea>
+
+        <button type="submit"
+          class="w-full bg-purple-700 text-white py-3 rounded-lg font-semibold
+                 hover:bg-purple-800 transition transform hover:scale-[1.02] shadow-lg">
+          Envoyer
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- POPUP CONFIRMATION -->
+<div id="popup" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-6 text-center shadow-xl max-w-sm">
+    <h3 class="text-xl font-bold text-purple-700 mb-2">Message envoyé ✅</h3>
+    <p class="text-gray-600 mb-4">
+      Merci pour votre message.<br>Nous vous répondrons rapidement.
+    </p>
+    <button onclick="closePopup()"
+      class="bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-800">
+      Fermer
+    </button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-purple-700 text-white text-center py-6 mt-12">
+  &copy; 2026 SS Parfumerie — Tous droits réservés
+</footer>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+/* 🔴 REMPLACE PAR TES CLÉS EMAILJS */
+emailjs.init("TON_PUBLIC_KEY");
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
+    from_name: name,
+    reply_to: email,
+    message: message
+  })
+  .then(() => {
+    document.getElementById("popup").classList.remove("hidden");
+    this.reset();
+  })
+  .catch(error => {
+    alert("Erreur lors de l'envoi du message");
+    console.error(error);
+  });
+});
+
+function closePopup() {
+  document.getElementById("popup").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>
+
+
